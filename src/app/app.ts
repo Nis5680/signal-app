@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, effect, signal } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +7,17 @@ import { Component, signal } from '@angular/core';
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('signal-app');
+  count= signal(5);
+  x=20;
+
+  constructor() {
+    effect(()=>{
+      console.log(this.count());
+    });
+  }
+  
+
+  updatevalue(){
+    this.count.set(30);
+  }
 }
