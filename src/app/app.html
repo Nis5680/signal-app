@@ -1,5 +1,7 @@
 <h1>Signal App</h1>
 <h1>{{x}}</h1>
 <h1>{{count()}}</h1>
-<button (click)="updatevalue('inc')">Increment</button>
-<button (click)="updatevalue('dec')">decrement</button>
+<!-- <button (click)="updatevalue('inc')">Increment</button>
+<button (click)="updatevalue('dec')">decrement</button> -->
+<button (click)="count.set(count() + 1)">Increment</button>
+<button (click)="count.set(count() - 1)">Decrement</button>
