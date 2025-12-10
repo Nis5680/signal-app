@@ -17,7 +17,11 @@ export class App {
   }
   
 
-  updatevalue(){
-    this.count.set(this.count()+1);
+  updatevalue(variant:string){
+    if(variant === 'inc'){
+      this.count.set(this.count()+1);
+    } else if(variant === 'dec'){
+      this.count.set(this.count()-1);
+    }
   }
 }
