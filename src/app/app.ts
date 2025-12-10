@@ -18,6 +18,6 @@ export class App {
   
 
   updatevalue(){
-    this.count.set(30);
+    this.count.set(this.count()+1);
   }
 }
